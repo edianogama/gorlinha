@@ -82,12 +82,15 @@
  .about-section-square {
     display: inline-block;
     position: absolute;
-    top: -15px;
-    height: 110px;
-    width: 100px;
-    left: 0;
+    top: -3vh;
+    left: 105px;
     z-index: -1;
- }
+}
+.about-section-square.square-orange.square-right-bottom{
+    width: 6vw;
+    height: 22vh;
+    background: #fe8d2e;
+}
  .about-section-square.square-right-bottom {
     right: 0;
     left: auto;
@@ -96,7 +99,26 @@
  }
  .about-section-square.square-blue {
     background-color: #0045cd;
- }
+    height: 12vh;
+    width: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-section-square.square-blue-about{
+    width: 5.5vw;
+    height: 12vh;
+    margin-top: 2vh;
+    margin-left: -8vw;
+}
+.about-section div .square-blue-about-img{
+    width: 4vw;
+    display: inline;
+    margin-bottom: 1vh;
+}
+.about-section-square.square-blue img{
+    width: 4vw;
+}
  .about-section-square.square-orange {
     background-color: #fe8d2e;
  }
@@ -125,17 +147,45 @@
      text-transform: uppercase;
      line-height: 1;
      font-weight: 900;
- }
+     z-index: 999;
+}
+.bg-text-name{
+    position: absolute;
+    background: #0045cd;
+    width: 6.5vw;
+    height: 12vh;
+    z-index: -1;
+    top: 29px;
+    left: 28.5vw;
+}
+.bg-text-name::after {
+    content: '';
+    position: absolute;
+    background: #fe8d2e;
+    left: 31.5vw;
+    top: -30px;
+    padding: 5vh 6vw;
+}
  .hero-section .dancing{
      letter-spacing: 1px;
      color: #fff;
      font-size: 26px;
      line-height: 1;
      font-weight: 300;
- }
+}
+.about-section .email-rafael{
+    display: flex;
+}
+.about-section .email-rafael .logo-linkedIn{
+    width: 40px;
+    margin-right: 1vw;
+}
  @media screen and (max-width: 580px){
      .hero-section .dancing{
          font-size: 18px;
+     }
+     .bg-text-name{
+        display: none;
      }
  }
  .hero-section p{
@@ -290,7 +340,7 @@
      top: 50%;
      transform: translateY(-50%);
      z-index: 1;
- }
+}
  .about-section img {
      border-radius: 4px;
      max-width: 100%;
@@ -298,6 +348,17 @@
      display: block;
      margin: 0 auto;
      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.about-section p{
+    border: 1px solid red;
+}
+@media screen and (max-width: 580px){
+    .img-rafael{
+        display:none;
+    }
+    .about-section p{
+        font-size: .6rem;
+    }
  }
  .about-section p span {
      font-family: 'Dancing Script', cursive;
@@ -354,6 +415,8 @@
      overflow: hidden;
      height: 100vh;
      background-color: rgba(31,32,41,1);
+     background: url(/img/bg.jpg);
+     background-size: cover;
      transform: translateX(100%);
      -webkit-transition: all 300ms linear;
      transition: all 300ms linear;
@@ -385,13 +448,17 @@
      transform: rotate(90deg);
  }
  .job-section a{
+    color: #fff;
+    font-size: 1.5vw;
+ }
+ .job-section a span{
      margin: 0 auto;
-     font-size: 32px;
+     font-size: 2vw;
      font-weight: 900;
      letter-spacing: 1px;
      color: #fff;
    display: inline-block;
- }
+}
  .job-section .social a{
      margin-left: 8px;
      margin-right: 8px;
@@ -399,6 +466,19 @@
      font-weight: 600;
      letter-spacing: 1px;
      color: #866BAF;
+ }
+ .job-section .bg-job-orange{
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+    padding-right: 5vw;
+ }
+ .job-section .bg-job-orange div{
+    background: #fe8d2e;
+    position: absolute;
+    width: 5vw;
+    top: 52vh;
+    height: 20vh;
  }
  @media screen and (max-width: 580px){
      .job-section a{
@@ -409,6 +489,9 @@
          margin-right: 3px;
          font-size: 13px;
          letter-spacing: 0;
+     }
+     .job-section .bg-job-orange{
+        display: none;
      }
  }
  
