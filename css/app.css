@@ -105,6 +105,11 @@
     align-items: center;
     justify-content: center;
 }
+@media screen and (max-width: 580px) {
+    .about-section-square.square-blue{
+        height: 6vh;
+    }
+}
 .about-section-square.square-blue-about{
     width: 5.5vw;
     height: 12vh;
@@ -349,9 +354,6 @@
      margin: 0 auto;
      box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
-.about-section p{
-    border: 1px solid red;
-}
 @media screen and (max-width: 580px){
     .img-rafael{
         display:none;
@@ -359,14 +361,29 @@
     .about-section p{
         font-size: .6rem;
     }
- }
- .about-section p span {
-     font-family: 'Dancing Script', cursive;
-     letter-spacing: 1px;
-     color: #866BAF;
-     font-size: 25px;
-     font-weight: 400;
- }
+    .col-img-rafael{
+        display: none;
+    }
+    .about-section h1 img.square-blue-about-img{
+        z-index: -1;
+        display: none;
+    }
+    .about-section p span {
+        font-family: 'Dancing Script', cursive;
+        letter-spacing: 1px;
+        color: #866BAF;
+        font-size: 25px;
+        font-weight: 400;
+   }
+   .about-section-square.square-blue-about,
+   .about-section-square.square-orange.square-right-bottom{
+        display: none;
+    }
+    .about-section h1{
+        margin-bottom: -4px;
+    }
+}
+
  
  .contact-text {
     position: relative;
@@ -493,6 +510,12 @@
      .job-section .bg-job-orange{
         display: none;
      }
+     .job-section p{
+        border-bottom: .5px solid gray;
+     }
+     .job-section p span{
+        font-size: 17px;   
+    }
  }
  
  .travel-section,
