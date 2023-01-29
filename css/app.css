@@ -229,7 +229,15 @@
      opacity: 1;
      bottom: 5px;
  }
- 
+
+span svg{
+    width: 200px;
+}
+
+svg g path #_x31_{
+    border: 2px solid red;
+}
+
  body.about-on .hero-section {
      transform: scale(0.75);
      -webkit-transition-delay: 0ms;
@@ -384,7 +392,7 @@
     }
 }
 
- 
+
  .contact-text {
     position: relative;
     text-align: left;

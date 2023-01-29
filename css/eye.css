@@ -1,0 +1,243 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 60px;
+    transform: translate(2%, -60%);
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#eye {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 100% 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+}
+
+#ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: radial-gradient(circle, #fff, #ccc, #000);
+    animation: ball 5s ease-in-out infinite;
+}
+
+#iris {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background: #000;
+    transition: all 1s;
+}
+
+#eyelashes {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    left: 10%;
+    top: 34%;
+    border-radius: 100% 0;
+    transform: rotate(-55deg);
+    background: #ccc;
+    z-index: 9;
+    animation: eyelashes 5s ease-in-out infinite;
+}
+
+#eyelashes:before {
+    content: ' ';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: 12px;
+    top: 6px;
+    border-radius: 100% 0;
+    background: #ccc;
+    z-index: 9999;
+    transform: rotate(14deg);
+    animation: eyelashes 5s ease-in-out infinite;
+}
+
+#eyelashes:after {
+    content: ' ';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: 25px;
+    top: 15px;
+    border-radius: 100% 0;
+    transform: rotate(25deg);
+    background: #ccc;
+    animation: eyelashes 5s ease-in-out infinite;
+}
+
+#eyelashes2 {
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    top: 38%;
+    left: 90%;
+    border-radius: 100% 0;
+    transform: rotate(55deg);
+    background: #ccc;
+    z-index: 9;
+    animation: eyelashes 5s ease-in-out infinite;
+}
+
+#eyelashes2::before {
+    content: ' ';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: -13px;
+    top: 5px;
+    z-index: 9999;
+    border-radius: 100% 0;
+    background: #ccc;
+    transform: rotate(-15deg);
+    animation: eyelashes 5s ease-in-out infinite;
+}
+
+#eyelashes2::after {
+    content: ' ';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: -24px;
+    top: 12px;
+    border-radius: 100% 0;
+    background: #ccc;
+    transform: rotate(-32deg);
+}
+
+#lid {
+    fill: rgba(0, 0, 0, 0);
+    stroke: none;
+}
+
+/* #lid-top {
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+    height: 53px;
+    top: 62.5px;
+    left: 40px;
+    transform: translateY(-60px);
+    animation: lid-top 5s ease-in-out infinite;
+}
+
+#lid-bottom {
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+    height: 40px;
+    bottom: 62.5px;
+    left: 40px;
+    transform: rotate(180deg) translateY(-60px);
+    animation: lid-bottom 5s ease-in-out infinite;
+} */
+
+/* @keyframes lid-top {
+
+    0%,
+    10%,
+    18%,
+    26%,
+    34%,
+    48%,
+    56%,
+    76%,
+    84% {
+        transform: translateY(-60px);
+    }
+
+    14%,
+    30%,
+    52%,
+    80% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes lid-bottom {
+
+    0%,
+    10%,
+    18%,
+    26%,
+    34%,
+    48%,
+    56%,
+    76%,
+    84% {
+        transform: rotate(180deg) translateY(-60px);
+    }
+
+    14%,
+    30%,
+    52%,
+    80% {
+        transform: rotate(180deg) translateY(0);
+    }
+} */
+
+@keyframes eyelashes {
+
+    0%,
+    10%,
+    18%,
+    26%,
+    34%,
+    48%,
+    56%,
+    76%,
+    84% {
+        opacity: .8;
+    }
+
+    14%,
+    30%,
+    52%,
+    80% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes ball {
+
+    0%,
+    14%,
+    56% {
+        transform: rotate(-25deg) translateX(0);
+    }
+
+    18%,
+    30% {
+        transform: rotate(-15deg) translate(15px, 3px) scale(0.9);
+    }
+
+    34%,
+    52% {
+        transform: rotate(-15deg) translate(-15px, 5px) scale(0.9);
+    }
+}
